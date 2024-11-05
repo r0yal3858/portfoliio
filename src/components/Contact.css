@@ -1,0 +1,30 @@
+.contact__container {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 50px;
+}
+
+.contact__info {
+  font-size: larger;
+  color: var(--txt);
+  font-weight: bolder;
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0px;
+}
+
+.contact__info h1 {
+  font-weight: normal;
+  text-align: start;
+}
+.contact__info a {
+  text-decoration: none;
+  font-size: x-large;
+  color: var(--txt);
+}
+
+@media only screen and (max-width: 600px) {
+  .contact__container img {
+    display: none;
+  }
+}

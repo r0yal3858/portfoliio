@@ -1,0 +1,22 @@
+.links {
+  display: flex;
+  font-weight: bolder;
+  color: black;
+  align-items: center;
+  justify-content: center;
+  font-size: x-large;
+}
+.links a img {
+  margin: 0px 20px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+  .links__container {
+    font-size: medium;
+  }
+  .links a img {
+    transform: scale(0.5);
+  }
+}

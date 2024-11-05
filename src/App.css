@@ -1,0 +1,127 @@
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+:root {
+  --hill1: rgb(160, 241, 158);
+  --hill2: rgb(85, 223, 85);
+  --hill3: rgb(106, 195, 106);
+  --hill4: rgb(69, 193, 69);
+  --txt: #000;
+  height: max-content;
+  z-index: 100;
+}
+
+body {
+  margin: 0;
+}
+
+.background {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  z-index: 1;
+}
+.background__day {
+  background-image: linear-gradient(to bottom right, #aafefe, white);
+}
+.background__night {
+  background-image: linear-gradient(to top right, #2e2c2c, rgb(174, 174, 174));
+}
+.celestials {
+  display: flex;
+  aspect-ratio: 1/1;
+  margin: 100px;
+  background-color: transparent;
+  border-radius: 50%;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.celestial__change {
+  animation: rotation 2s forwards;
+}
+.celestial__change--reverse {
+  animation: reverse-rotation 2s forwards;
+}
+.celestial--1 {
+  width: 45px;
+  height: 45px;
+  background-color: yellow;
+  border-radius: 50%;
+}
+.celestial--2 {
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  background-color: white;
+}
+.hill1 {
+  position: fixed;
+  width: 100%;
+  height: 30vh;
+
+  background-color: var(--hill1);
+  bottom: 0px;
+  border-radius: 35% 50% 0 0;
+  z-index: 1;
+}
+
+.hill2 {
+  position: fixed;
+  width: 100%;
+  height: 30vh;
+  background-color: var(--hill2);
+  bottom: -20px;
+  right: 500px;
+  border-radius: 35% 50% 0 0;
+  z-index: 2;
+}
+
+.hill3 {
+  position: fixed;
+  width: 100%;
+  height: 30vh;
+  background-color: var(--hill3);
+  bottom: -50px;
+  left: 500px;
+  border-radius: 35% 50% 50% 0;
+  z-index: 3;
+}
+.hill4 {
+  position: fixed;
+  width: 50%;
+  height: 30vh;
+  background-color: var(--hill4);
+  bottom: -100px;
+  left: 25%;
+  border-radius: 50% 50%;
+  z-index: 4;
+}
+@keyframes rotation {
+  0% {
+    transform: rotateZ(25deg);
+  }
+  100% {
+    transform: rotateZ(205deg);
+  }
+}
+
+@keyframes reverse-rotation {
+  0% {
+    transform: rotateZ(205deg);
+  }
+  100% {
+    transform: rotateZ(25deg);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .background {
+    background-color: azure;
+    display: none;
+  }
+}

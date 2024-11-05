@@ -1,0 +1,112 @@
+.intro__container {
+  display: flex;
+  justify-content: space-around;
+  margin: 100px 0px;
+  color: var(--txt);
+}
+.intro {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+.intro__name {
+  font-size: xx-large;
+  font-weight: bold;
+  font-family: Helvetica;
+}
+.intro__description {
+  font-size: x-large;
+}
+
+.intro__links {
+  display: flex;
+  justify-content: space-around;
+  margin: 10px auto;
+}
+.intro__links a,
+a:visited,
+a:active {
+  margin: 10px 20px;
+  font-size: x-large;
+  font-weight: bolder;
+  text-decoration: none;
+  color: var(--txt);
+}
+.intro__links a:after {
+  content: "";
+  display: block;
+  margin-top: 2px;
+  height: 3px;
+  width: 0px;
+  background: transparent;
+  transition: width 0.5s ease, background-color 0.5s ease;
+}
+.intro__links a:hover:after {
+  width: 100%;
+  background: rgb(4, 115, 125);
+}
+
+.techStack {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+.techStack i {
+  font-size: xx-large;
+}
+
+.intro__2 {
+  display: flex;
+  justify-content: space-around;
+  color: var(--txt);
+}
+.intro__2--container {
+  width: 50%;
+}
+.intro__2--name {
+  font-family: Helvetica;
+  font-size: xx-large;
+  font-weight: bold;
+}
+.intro__2--description {
+  font-size: larger;
+  margin: 20px 0px;
+}
+
+@media only screen and (max-width: 600px) {
+  .intro__container {
+    margin: 0px;
+  }
+  .intro__container .intro {
+    width: 85%;
+  }
+  .intro__2 {
+    width: 100%;
+  }
+  .intro__2 .intro__2--container {
+    width: 85%;
+  }
+  .responsive {
+    display: none;
+  }
+
+  .intro__2--name,
+  .intro__description {
+    font-size: large;
+  }
+  .intro__2--description {
+    font-size: medium;
+  }
+  .techStack {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-items: center;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .techStack div {
+    text-align: center;
+  }
+}
